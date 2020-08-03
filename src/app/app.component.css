@@ -1,0 +1,81 @@
+.app {
+  padding: 5vmin;
+}
+mat-card {
+  font-family: "Raleway", sans-serif;
+}
+mat-card:nth-of-type(1) {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(38, 36, 46) 30%,
+    rgb(58, 59, 70) 70%
+  );
+  color: white;
+  text-align: center;
+  border-radius: 20px 0px 0px 20px;
+}
+mat-card-content {
+  font-weight: 200;
+}
+img {
+  margin-bottom: 9vmin;
+}
+#name {
+  margin-bottom: 7vmin;
+  font-size: 2rem;
+  font-weight: 200;
+}
+span {
+  font-weight: 300;
+}
+#college {
+  font-size: 1rem;
+}
+#number {
+  margin-top: -0.3rem;
+  font-size: 0.9rem;
+  margin-bottom: 10vmin;
+}
+mat-card:nth-of-type(2) {
+  background-color: rgba(126, 126, 126, 0.589);
+  color: rgb(255, 255, 255);
+  border-radius: 0 20px 20px 0;
+  padding: 7vmin;
+}
+#heading {
+  font-family: "Fredoka One", cursive;
+  font-size: 2.4rem;
+}
+@media only screen and (max-width: 600px) {
+  mat-card:nth-of-type(1) {
+    border-radius: 20px 20px 0px 0px;
+  }
+  mat-card:nth-of-type(2) {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+mat-list {
+  margin-top: 5vmin;
+}
+.item {
+  background-color: rgba(26, 27, 27, 0.397);
+  border-radius: 7px;
+  margin-bottom: 1.7vmin;
+  color: white;
+  text-align: center;
+}
+.eventname {
+  font-size: 1rem;
+  font-weight: 100;
+}
+a:link {
+  color: rgb(226, 235, 253);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(216, 229, 252);
+}
+i {
+  margin-right: 1vmin;
+}
