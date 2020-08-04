@@ -23,32 +23,40 @@
   </mat-card>
   <mat-card fxFlex.gt-sm="60">
     <mat-card-title id="heading">Submissions</mat-card-title>
-    <mat-list
-      fxLayout="row wrap"
-      fxLayoutAlign="start none"
-      fxLayout.lt-md="column"
-      fxLayoutGap="1vmax"
+    
+    <mat-list *ngIf="submissions.length!==0 else elseBlock"
+    fxLayout="row wrap"
+    fxLayoutAlign="start none"
+    fxLayout.lt-md="column"
+    fxLayoutGap="1vmax"
+  >
+    <mat-list-item
+      class="item"
+      fxFlex="30"
+      *ngFor="let submission of submissions"
     >
-      <mat-list-item
-        class="item"
-        fxFlex="30"
-        *ngFor="let submission of submissions"
+      <p
+        matLine
+        style="margin-bottom: 0.4rem;padding: 0.5rem;font-size: 1.1rem;"
+        class="eventname"
       >
-        <p
-          matLine
-          style="margin-bottom: 0.4rem; padding: 0.5rem; font-size: 1rem;"
-          class="eventname"
-        >
-          {{ submission.event }}
-        </p>
-        <a
-          matLine
-          style="font-weight: 300; margin-bottom: 0.2rem;"
-          *ngFor="let link of submission['links']"
-          href="{{ link }}"
-          >{{ link }}</a
-        >
-      </mat-list-item>
-    </mat-list>
-  </mat-card>
+        {{ submission.event }}
+      </p>
+      <a
+        matLine
+        style="font-weight: 100; margin-bottom: 0.2rem;"
+        *ngFor="let link of submission['links']"
+        href="{{ link }}"
+        >{{ link }}</a
+      >
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+
+    <ng-template #elseBlock>
+      <div class="nosubmission">
+        You have not made any submissions yet
+      </div>
+    </ng-template>
+    
 </div>
